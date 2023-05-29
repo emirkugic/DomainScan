@@ -2,7 +2,7 @@ import requests
 import json
 
 # VirusTotal API key
-vt_api_key = 'your-api-key'
+vt_api_key = 'virus-total-api-key'
 
 # OpenCTI API key
 opencti_api_key = 'opencti-api-key'
@@ -38,7 +38,8 @@ if response.status_code == 200:
         print(f'Less than 10 hits for domain {domain} on VirusTotal')
 
     # Bonus task: Query Cisco AMP EDR for IP addresses
-    ip_addresses = result.get('resolutions', [])[:3]  # Get the first 3 IP addresses
+    ip_addresses = result.get('resolutions', [])[
+        :3]  # Get the first 3 IP addresses
     for ip_address in ip_addresses:
         ip = ip_address['ip_address']
         ctr_url = f'https://visibility.amp.cisco.com/iroh/iroh-enrich/observe/observables'
