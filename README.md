@@ -1,2 +1,2 @@
-# DomanScan
-Using VirusTotal and OpenCTI to scan a doman for viruses
+# DomainScan
+Using VirusTotal and OpenCTI to scan a domain for viruses
